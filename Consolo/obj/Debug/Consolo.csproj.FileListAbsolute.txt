@@ -1,0 +1,8 @@
+C:\DevC\Consolo\bin\Debug\Consolo.exe.config
+C:\DevC\Consolo\bin\Debug\Consolo.exe
+C:\DevC\Consolo\bin\Debug\Consolo.pdb
+C:\DevC\Consolo\obj\Debug\Consolo.csproj.AssemblyReference.cache
+C:\DevC\Consolo\obj\Debug\Consolo.csproj.SuggestedBindingRedirects.cache
+C:\DevC\Consolo\obj\Debug\Consolo.csproj.CoreCompileInputs.cache
+C:\DevC\Consolo\obj\Debug\Consolo.exe
+C:\DevC\Consolo\obj\Debug\Consolo.pdb
