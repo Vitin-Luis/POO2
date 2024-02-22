@@ -11,10 +11,13 @@ namespace Consolo
         private string proprietario { get; set; }
         private double saldo { get; set;  }
 
+        private string log { get; set; }
+
         public ContaCorrente(string proprietario, double saldo)
         {
             this.proprietario = proprietario;
             this.saldo = saldo;
+            this.log = "\nConta criada\n";
         }
 
 
@@ -23,12 +26,12 @@ namespace Consolo
             if (saldo >= valor_saque)
             {
                 saldo -= valor_saque;
-                Console.WriteLine($"\nSaque de { saldo } realizado.\n");
+                this.log += "\nSaque de: " + valor_saque.ToString();
                 return true;
             }
             else
             {
-                Console.WriteLine("\nSaldo insuficiente!\n");
+                this.log = "\nFalha no saque, sem dinheiro kk\n";
                 return false;
             }
         }
@@ -36,7 +39,7 @@ namespace Consolo
         public Boolean depositar(double valor_deposito)
         {
             saldo += valor_deposito;
-            Console.WriteLine($"\nDeposito de { saldo } realizado com sucesso.\n");
+            this.log += "\nDeposito de: " + valor_deposito.ToString();
             return true;
         }
     }
