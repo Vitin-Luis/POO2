@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgendaTelefonica.cs" />
     <Compile Include="ContaCorrente.cs" />
+    <Compile Include="Contato.cs" />
     <Compile Include="Endereco.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
