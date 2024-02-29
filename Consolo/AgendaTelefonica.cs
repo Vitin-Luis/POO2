@@ -8,35 +8,64 @@ namespace Consolo
 {
     public class AgendaTelefonica
     {
-        List<Contato> contatos;
+        public string proprietario { get; set; }
+        public List<Contato> contatos { get; set; }
 
-        public AgendaTelefonica(List<Contato> contatos)
+        public Dictionary<string, Contato> dicionario { get; set; }
+
+
+
+        public AgendaTelefonica(string proprietario)
         {
-            contatos = new List<Contato>();
-            this.contatos = contatos;
+            //contatos = new List<Contato>();
+            dicionario = new Dictionary<string, Contato>();
+            this.proprietario = proprietario;
         }
 
         public void inserir(string nome, string numero)
         {
-            contatos.Add(new Contato(nome, numero));
+            dicionario.Add(nome, new Contato(nome, numero));
         }
-        public string buscarNumero(string nome)
+        /*public Contato buscar(string nome)
         {
-            Contato contato;
+            foreach (Contato c in contatos)
+            {
+                if (c.nome.Contains(nome))
+                {
+                    return c;
+                }
+            }
+            return null;
             
         }
-        public void remover(string nome)
+        */
+
+        public Contato buscaDicionario(string nome)
         {
-            contatos.RemoveAt();
+            return dicionario[nome];
+        }
+        /*public void remover(string nome)
+        {
+            Contato c = buscar(nome);
+            if (contatos.Remove(c))
+            {
+                Console.WriteLine("\nREMOVIDO!!\n");
+            }
+            else
+            {
+                Console.WriteLine("\nNÃO EXISTE ESSE CONTATO\n");
+            }
+        }
+        */
+
+        public void removerDicionario(string nome)
+        {
+            dicionario.Remove(nome);
         }
         public int tamanho()
         {
-            int cont = 0;
-            foreach (Contato contato in contatos)
-            {
-                cont++;
-            }
-            return cont;
+            
+            return dicionario.Count;
         }
     }
 }

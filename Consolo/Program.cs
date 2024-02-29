@@ -10,10 +10,9 @@ namespace Consolo
     {
         static void Main(string[] args)
         {
-            ContaCorrente cont = new ContaCorrente("Victor", 10000);
+            AgendaTelefonica agenda = new AgendaTelefonica("Cássio");
 
-            cont.depositar(1000000);
-            cont.sacar(21);
+            agenda.inserir("Cassio", "996474457");
         }
     }
 }
