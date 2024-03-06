@@ -16,5 +16,10 @@ namespace Consolo
             this.nome = nome;
             this.numero = numero;
         }
+        public override string ToString()
+        {
+            return " \nNome: " + nome + " Número: " + numero;
+        }
     }
 }
+

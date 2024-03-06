@@ -67,5 +67,7 @@ namespace Consolo
             
             return dicionario.Count;
         }
+
+        
     }
 }
